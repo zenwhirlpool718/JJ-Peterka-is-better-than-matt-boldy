@@ -1,0 +1,28 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, .25fr));
+    /* grid-auto-rows: max-content(20px); */
+    row-gap: 5px;
+    column-gap: 5px;
+
+    justify-content: center;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-columns: 1fr 50%;
+
+    align-items: center;
+
+    padding: 0px 30px;
+    border: 5px solid var(--green-1);
+    border-radius: 10px;
+}
+
+.grid-item > .image {
+    padding: 10px;
+}
+
+.grid-item > .image > img {
+    width: 100%;
+}
