@@ -47,11 +47,11 @@ body {
     justify-content: center;
 }
 
-/* Content Styles */
-.main-body {
-    margin: 30px;
+/* Inforomation block styles */
+.info-block {
+    background-color: var(--grey-4);
+    padding: 30px;
 }
-
 
 /* Link Styles */
 a {

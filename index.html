@@ -15,35 +15,19 @@
     <title>Home</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-     <div class="nav-bar">
-
-        <!-- Title -->
-        <div class="nav-header">
-            <h1>Minecraft Server for Friendship and Tolerance</h1>
-        </div>
-
-        <!-- Links to other pages -->
-        <div class="nav-links">
-            <div class="nav-item">
-                <a href="index.html">Home</a>
-            </div>
-
-            <div class="nav-item">
-                <a href="rules.html">Rules</a>
-            </div>
-
-            <div class="nav-item">
-                <a href="countries.html">Countries</a>
-            </div>
-        </div>
-     </div>
-
-     <div class="main-body">
-        <div id="info-block">
-            <h1>About the Server</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo minima et consequatur accusantium numquam veniam dolorem cum, quia consequuntur maxime optio voluptate voluptas eligendi nam molestias modi ullam, delectus nobis sed nesciunt, est iure necessitatibus cupiditate eveniet. Corrupti sapiente voluptates laboriosam blanditiis accusamus deleniti molestiae explicabo doloremque. Voluptas, ipsam dolorem.</p>
-        </div>
-     </div>
+    <div id="heading"></div>
+    <div class="info-block">
+        <h1>About the Server</h1>
+        <p>The <b>Minecraft Server for Friendship and Tolerance</b> is a SMP server divided into <b>Nations</b>. <b>Nations</b> can go to war or work together. 
+        Mainly though, the server is for fun and to build things.</p>
+    </div>
+    <div id="footer"></div>
 </body>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('heading').innerHTML = data;
+        });
+</script>
 </html>

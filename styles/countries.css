@@ -13,8 +13,13 @@
     grid-template-columns: 1fr 50%;
 
     padding: 1em 1em;
-    border: .3em solid var(--green-1);
+    border: .3em solid var(--green-4);
     border-radius: 10px;
+    transition: .5s;
+}
+
+.grid-item:hover {
+    border-color: var(--green-1);
 }
 
 .grid-item > .text {
@@ -37,4 +42,8 @@
 
 .grid-item > .image > img {
     width: 100%;
+}
+
+.main-body > h1 {
+    text-align: center;
 }
