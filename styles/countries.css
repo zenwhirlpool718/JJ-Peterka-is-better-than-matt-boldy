@@ -1,7 +1,7 @@
 #grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, .25fr));
-    /* grid-auto-rows: max-content(20px); */
+    grid-template-columns: repeat(auto-fit, minmax(30em, .25fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(20px, 500px)); */
     row-gap: 5px;
     column-gap: 5px;
 
@@ -12,11 +12,23 @@
     display: grid;
     grid-template-columns: 1fr 50%;
 
-    align-items: center;
-
-    padding: 0px 30px;
-    border: 5px solid var(--green-1);
+    padding: 1em 1em;
+    border: .3em solid var(--green-1);
     border-radius: 10px;
+}
+
+.grid-item > .text {
+    h1 {
+        font-size: 2em;
+        margin: 0px;
+    }
+    h2 {
+        font-size: 1.2em;
+        margin: 0px;
+    }
+    p {
+        margin: 5px 0px;
+    }
 }
 
 .grid-item > .image {
