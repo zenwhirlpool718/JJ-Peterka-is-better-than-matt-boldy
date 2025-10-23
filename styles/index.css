@@ -1,0 +1,41 @@
+.super-cool-art {
+    background-image: url('/images/misc/background-image.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: 100%;
+    background-position: center;
+    padding: 30px;
+}
+
+.super-cool-art > #art-headers {
+    background-color: var(--green-3);
+    width: 450px;
+    padding: 30px;
+}
+
+#announcement-container {
+    margin: 30px;
+}
+
+#announcement-container > .news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    column-gap: 5px;
+}
+
+#announcement-container > .news > .news-card {
+    padding: 5px;
+    border: solid var(--green-5);
+    border-radius: 10px;
+
+    img {
+        border-radius: 10px;
+        width: 50%;
+    }
+}
+
+#emphisise {
+    color: var(--green-1);
+}

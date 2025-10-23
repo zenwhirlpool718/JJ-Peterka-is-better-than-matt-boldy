@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/rules.css">
+
+    <title>Rules</title>
+</head>
+<body>
+
+    <div id="heading"></div>
+
+    <div id="rules">
+        <!-- Main rules for server -->
+         <div class="layer1">
+            <h1>Main rules</h1>
+            <ol>
+                <li>No Attacking othter players withoug a formal decloration of war</li>
+                <li>No stealing or greifing EVER</li>
+                <li> is absolutely not tolerated</li>
+                <li>No spawning the wither</li>
+                <li>No TNT traps of other types of traps that result in sof locking or death</li>
+                <li>Plaer not part of a country may be illed as they are considered "Barbarians" and are uncivilized</li>
+                <li>No killing ANY other player's animals or villagers</li>
+                <li>Be kind</li>
+                <li>End is a no PVP zone at all time (even during war)</li>
+            </ol>
+        </div>
+
+        <!-- Nation Identification -->
+        <div class="layer1">
+            <h1>Nation Rules</h1>
+            <ol>
+                <li>Each Nation must have a name</li>
+                <li>Each Nation must have a Capital city</li>
+                <li>Each Nation must have at least one member to be considered legitimate</li>
+                <li>Each Nation must have a banner
+                    <ul>
+                        <li>Banner must be made up of 2-4 colors</li>
+                        <li>Do not use same color scheme as another Nation</li>
+                    </ul>
+                </li>
+                <li>Each Nation can make their own rules for their zones of control</li>
+                <li>Anyone can make a country, but the country you are leaving is allowed to try to stop you and/or kill you</li>
+            </ol>
+
+            <div class="layer2">
+                <h2>Land Ownership and Expansion</h2>
+                <ol>
+                    <li>Every piece of land, base, structure, build, and other definable map features must have a banner that is easily noticable</li>
+                    <li>The banner represents the claim on the land and any infraction without permisson can be a reason for war</li>
+                    <li>When at war, you repalace the banner of the other nation with yours. That land is now under your control</li>
+                    <li>Lands can be traded in both war and peace</li>
+                    <li>If the capital of a Nation is taken, the owners of the Nation must either set up a government in exile or declare itself a fallen nation and divide its resources among the conqueror and the remaining citizens</li>
+                </ol>
+            </div>
+            
+            <div class="layer2">
+                <h2>Rules of War</h2>
+                <ol>
+                    <li>To formally declare a war you must tell the leader of the opposition and one neutral party while all three are online</li>
+                    <li>Each player gets 2 canonical lives</li>
+                    <li>You loose a life
+                        <ul>
+                            <li>if you are killed by a player who is part of the war</li>
+                            <li>If you are killed by a player who is not part of the war</li>
+                            <li>If you are killed via traps (Dispensers, lava, ect)</li>
+                        </ul>
+                    </li>
+                    <li>If all members of a Nation lose both their lives then the other Nation gets to decide what happens</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <p id="important">For potentially more up to date rules check the Google Doc which is linked in the GroupMe</p>
+        <p></p>
+    </div>
+</body>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('heading').innerHTML = data;
+        });
+</script>
+</html>
