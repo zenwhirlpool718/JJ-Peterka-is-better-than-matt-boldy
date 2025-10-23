@@ -53,6 +53,10 @@ body {
     padding: 30px;
 }
 
+#important {
+    border-left: 5px var(--green-1) solid;
+}
+
 /* Link Styles */
 a {
     color: white;
