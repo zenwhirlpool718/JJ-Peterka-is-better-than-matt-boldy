@@ -1,10 +1,10 @@
 #grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30em, .25fr));
+    grid-template-columns: repeat(auto-fit, minmax(25em, .25fr));
     /* grid-template-rows: repeat(auto-fit, minmax(20px, 500px)); */
     row-gap: 5px;
     column-gap: 5px;
-
+    margin: 30px;
     justify-content: center;
 }
 

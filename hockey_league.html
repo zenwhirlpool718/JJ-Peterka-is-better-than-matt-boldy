@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey Leagues</title>
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/hockey.css">
+
+</head>
+<body>
+    <div id="heading"></div>
+
+    <div class="basic-info">
+        <div id="image">
+            <img src="images/minecraft_hockey_league.jpeg" alt="Minecraft Hockey League Image">
+        </div>
+
+        <div class="text">
+            <p>Welcome to the Hockey League, Right now this page is just serving to show some basic information on the hockey league.
+                 later it will show a Roster and other usefull things. <b>Right now, rules can be found <a href="https://docs.google.com/document/d/1lo6O7iEOTCS7Rn1QPXn0ItVKspmEawgnSOXcE8Wo9RQ/edit?usp=sharing" style="color: #5e2f;">Here</a></b>
+            </p>
+        </div>
+    </div>
+
+    <h1>The Teams</h1>
+    <div class="team-wrapper">
+        <div class="team-info">
+            <h1>Königsberg Kings</h1>
+            <p>Owner: <b>Zenwhirlpool</b></p>
+            <p>players: <b>Zenwhirlpool</b></p>
+        </div>
+
+        <div class="team-info">
+            <h1>Rome Barbarians</h1>
+            <p>Owner: <b>King_Arsher</b></p>
+            <p>players: <b>King_Arsher</b></p>
+        </div>
+
+        <div class="team-info">
+            <h1>Badlantis Hockey Club</h1>
+            <p>Owner: <b>PowerUp7_Forever</b></p>
+            <p>players: <b>???</b></p>
+        </div>
+
+        <div class="team-info">
+            <h1>Sparta Spartans</h1>
+            <p>Owner: <b>Aaron_da_robot24</b></p>
+            <p>players: <b>Aaron_da_robot24</b></p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('heading').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+</html>
