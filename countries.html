@@ -27,7 +27,7 @@
                 <h1 id="country">Deutschland</h1>
                 <h2>Königsberg</h2>
                 <p>Leader: <b>Zenwhirlpool</b></p>
-                <p>Population: <b>4</b></p>
+                <p>Population: <b>5</b></p>
             </div>
             <div class="image">
                 <img src="images/banners/deutschland.png" alt="deutschland">
@@ -105,6 +105,12 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('heading').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
         });
 </script>
 </html>

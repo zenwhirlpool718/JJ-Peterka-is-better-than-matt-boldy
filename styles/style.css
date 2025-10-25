@@ -47,6 +47,21 @@ body {
     justify-content: center;
 }
 
+/* Footer */
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--grey-6);
+}
+
+.foot > .link-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* Inforomation block styles */
 .info-block {
     background-color: var(--grey-4);

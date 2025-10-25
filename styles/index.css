@@ -10,7 +10,6 @@
 
 .super-cool-art > #art-headers {
     background-color: var(--green-3);
-    width: 450px;
     padding: 30px;
 }
 
@@ -33,6 +32,13 @@
     img {
         border-radius: 10px;
         width: 50%;
+    }
+}
+
+#announcement-container > .news > .news-card#video {
+    video {
+        border-radius: 10px;
+        width: 100%;
     }
 }
 

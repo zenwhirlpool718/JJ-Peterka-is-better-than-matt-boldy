@@ -38,6 +38,12 @@
                 <h1>Website Launch</h1>
                 <p>Well, as you can see the website has offically opened! Hopefully you can find all the information for the server you need, if there is something wrong or if you have any suggestions contact <span id="emphisise">Atlatl_Leader</span> and I'll see if there is anything I can do.</p>
             </div>
+
+            <div class="news-card" id="video">
+                <h1>Theres a Video!</h1>
+                <p>Super cool stuff has been announced and you need to watch to find out :)</p>
+                <video src="images/videos/MHL Reveal Trailer.mp4" controls>your browser does not support the video tag</video>
+            </div>
         </div>
     </div>
 
@@ -54,6 +60,12 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('heading').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
         });
 </script>
 </html>
