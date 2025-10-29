@@ -1,0 +1,32 @@
+/* Changing flex direction if width is smaller than 615px */
+
+@media(max-width: 615px) {
+
+    /* Header styles */
+    .nav-bar {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+
+    /* footer styles */
+    .foot {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .link-wrapper {
+        flex-direction: column;
+    }
+
+
+    /* Background styles */
+    .super-cool-art {
+        /* background-attachment: initial; */
+        height: 100%;
+    }
+}
