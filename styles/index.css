@@ -13,6 +13,10 @@
     padding: 30px;
 }
 
+.super-cool-art > #countdown-timer {
+    text-align: center;
+}
+
 #announcement-container {
     margin: 30px;
 }
