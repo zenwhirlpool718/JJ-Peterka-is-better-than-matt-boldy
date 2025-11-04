@@ -31,7 +31,7 @@
         <div class="news">
             <div class="news-card">
                 <h1 id="news-title">Server Opens!</h1>
-                <p id="news-body">Mark your calanders, the server will be having a kick-off event on <span id="emphisise">November 7th</span>. After the fun, you will be able to go do basically whatever you want. You really do not want to miss this. Be there or be square!</p>
+                <p id="news-body">Mark your calanders, the server will be having a kick-off event on <span id="emphisise">November 7th at 6:00PM MST</span>. After the fun, you will be able to go do basically whatever you want. You really do not want to miss this. Be there or be square!</p>
                 <img src="images/misc/celebrate.gif" alt="Steve from Minceraft dancing">
                 <p id="date">Date of event: <span id="emphisise">November 7th</span></p>
             </div>
@@ -83,7 +83,7 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("countdown-timer").innerHTML = "Server Opens in <br>" + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s" + "<br>Until Launch Party";
 
         if (distance < 0) {
             clearInterval(updateCount);

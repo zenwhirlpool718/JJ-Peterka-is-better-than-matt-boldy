@@ -73,6 +73,13 @@ body {
 }
 
 /* Link Styles */
+
+#text-link {
+    color: var(--green-3);
+    text-decoration: none;
+    font-size: initial;
+}
+
 a {
     color: white;
     text-decoration: none;
