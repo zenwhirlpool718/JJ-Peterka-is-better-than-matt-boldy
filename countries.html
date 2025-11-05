@@ -21,80 +21,7 @@
 
     <h1 style="text-align: center;">The Countries</h1>
 
-    <div id="grid">
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">Deutschland</h1>
-                <h2>Königsberg</h2>
-                <p>Leader: <b>Zenwhirlpool</b></p>
-                <p>Population: <b>5</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/deutschland.png" alt="deutschland">
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">Australia</h1>
-                <h2>Badlantis</h2>
-                <p>Leader: <b>Atlatl_Leader</b></p>
-                <p>Population: <b>2</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/australia.png" alt="australia">
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">America</h1>
-                <h2>Dragonkeep</h2>
-                <p>Leader: <b>_izotz</b></p>
-                <p>Population: <b>2</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/america.png" alt="america">
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">Roman Empire</h1>
-                <p>Leader: <b>King_Arsher</b></p>
-                <p>Population: <b>4</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/roman empire.png" alt="roman empire">
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">ACME</h1>
-                <h2 id="capital">???</h2>
-                <p>Leader: <b>PowerUp7Forever</b></p>
-                <p>Population: <b>1</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/acme.png" alt="acme">
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="text">
-                <h1 id="country">Land of da BEES</h1>
-                <h2 id="capital">???</h2>
-                <p>Leader: <b>RooBeess</b></p>
-                <p>Population: <b>1</b></p>
-            </div>
-            <div class="image">
-                <img src="images/banners/land of the bees.png" alt="land of da bees">
-            </div>
-        </div>
-
-    </div>
+    <div id="grid"></div>
 
     <div class="info-block">
         <p id="important">If you would like to make your own country fill out this <a href="https://forms.gle/gphV6X5se78M9YuQ6" id="text-link">Google Form</a></p>
@@ -105,6 +32,37 @@
 
 </body>
 <script>
+    fetch("api/get_nations.php")
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById("grid");
+            container.innerHTML = "";
+
+            data.forEach(item => {
+                const card = document.createElement("div");
+                card.classList.add("grid-item");
+
+                card.innerHTML = `
+                <div class="text">
+                    <h1>${item.country}</h1>
+                    <h2>${item.capital}</h2>
+                    <p>Leader <b>${item.leader}</b></p>
+                    <p>Population <b>${item.population}</b></p>
+                </div>
+                <div class="image">
+                    <img src="${item.banner}" alt="${item.country} Banner">
+                `;
+
+                container.appendChild(card)
+            });
+        })
+        .catch(err => {
+            document.getElementById("grid").innerHTML = 
+                "<p style='text-align: center; color: red;'>Failed to load countries</p>";
+            console.error(err);
+        });
+
+
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
